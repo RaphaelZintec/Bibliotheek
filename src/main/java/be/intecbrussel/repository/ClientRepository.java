@@ -1,4 +1,4 @@
 package be.intecbrussel.repository;
 
-public class DataBaseClient {
+public class ClientRepository {
 }

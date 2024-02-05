@@ -1,6 +1,6 @@
 package be.intecbrussel;
 
-public class MainApp {
+public class BibliotheekApp {
     public static void main(String[] args) {
         System.out.println("hello");
     }
