@@ -1,0 +1,13 @@
+@startuml
+start
+:employee provides sorting method by name or Id;
+
+if(sorting by name) then (yes)
+    :system retrieves the clients;
+    :system sort the clients by name;
+    end;
+else (no, sort by Id)
+        :system retrieves the clients;
+        :system sort the clients by Id;
+        end;
+@enduml

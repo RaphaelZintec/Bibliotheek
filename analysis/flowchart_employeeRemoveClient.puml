@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee provides Id of client;
+if(client is found) then (yes)
+:client is already in the system;
+:error message "Client already exists";
+end
+else (no)
+:add client to the system;
+
+
+end
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+start
+:employee inputs name or id of client;
+
+if (employee inputs name) then (yes)
+:system retrieves client by name;
+if (are there clients) then (yes)
+if (is there more than one client) then (yes)
+:return all found clients;
+end;
+else (no)
+:return the found client;
+end;
+endif
+
+
+else (no)
+:error, no clients found;
+end;
+endif
+
+else (no, uses ID)
+:system retrieves client by ID;
+if (is the client found) then (yes)
+:return the found client;
+end;
+else (no)
+:error no clients found;
+end;
+endif
+
+
+@enduml

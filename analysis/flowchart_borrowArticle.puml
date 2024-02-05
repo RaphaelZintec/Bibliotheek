@@ -1,0 +1,11 @@
+@startuml
+start
+:client ask for article;
+if (article in library) then (yes)
+    :remove article from library;
+    :provide article to client;
+    end;
+else (no)
+    :article is not in stock;
+    end
+@enduml

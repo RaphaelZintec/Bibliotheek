@@ -1,2 +1,4 @@
-package be.intecbrussel.service;public class DataBaseArticle {
+package be.intecbrussel.repository;
+
+public class DataBaseArticle {
 }
