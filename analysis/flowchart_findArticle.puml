@@ -1,0 +1,34 @@
+@startuml
+
+start
+:employee or client inputs name or id of article;
+
+if (employee or client inputs name) then (yes)
+:system retrieves article by name;
+if (are there articles) then (yes)
+if (is there more than one article) then (yes)
+:return all found articles;
+end;
+else (no)
+:return the found article;
+end;
+endif
+
+
+else (no)
+:error, no articles found;
+end;
+endif
+
+else (no, uses ID)
+:system retrieves article by ID;
+if (is the article found) then (yes)
+:return the found article;
+end;
+else (no)
+:error no article found;
+end;
+endif
+
+
+@enduml
