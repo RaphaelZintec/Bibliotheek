@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+
+
+rectangle usecases {
+(borrowing article) as borrow
+(return article) as returnarticle
+(renew date) as renew
+(find article) as find
+
+(add book) as add
+(remove book) as remove
+(sort book) as sortBook
+(add client) as addClient
+(sort client) as sortClient
+(remove client) as removeClient
+(find client) as findClient
+}
+
+client -->  borrow
+client --> returnarticle
+client --> renew
+client --> find
+
+employee --> add
+employee --> remove
+employee --> find
+employee --> sortBook
+employee --> addClient
+employee --> sortClient
+employee --> findClient
+employee --> removeClient
+employee --> renew
+
+@enduml
