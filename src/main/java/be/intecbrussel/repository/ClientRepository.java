@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ClientRepository {
 
-    public List<Client> listClient = new ArrayList<>();
+    private List<Client> listClient = new ArrayList<>();
 
     public List<Client> getClient() {
         return listClient;

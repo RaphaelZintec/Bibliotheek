@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ArticleRepository {
 
-    public List<Article> listArticle = new ArrayList<>();
+    private List<Article> listArticle = new ArrayList<>();
     {
 
     }
