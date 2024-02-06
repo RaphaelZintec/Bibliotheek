@@ -1,0 +1,15 @@
+@startuml
+
+class ArticleService {
+
+- ArticleRepository articleRepository;
+
++ ArticleService (ArticleRepository)
++ borrowArticle (String nameOfArticle, int idClient)
++ addArticle (Article article)
++ removeArticle (int id)
++ findArticle (int id): Article
++ sortArticle(SortType sortType)
+}
+
+@enduml
