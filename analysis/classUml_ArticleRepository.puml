@@ -1,0 +1,8 @@
+@startuml
+
+class ArticleRepository {
+-List<Article> listArticle;
++getListArticle() : List<Article>
+}
+
+@enduml
