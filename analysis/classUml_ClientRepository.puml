@@ -1,8 +1,0 @@
-@startuml
-
-class ClientRepository {
--List<Client> listClient;
-+getListClient() : List<Client>
-}
-
-@enduml
