@@ -1,6 +1,6 @@
 package be.intecbrussel.service;
 
-public class LibraryService {
+public class ClientService {
 
 
 }
