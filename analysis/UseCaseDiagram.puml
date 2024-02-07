@@ -8,6 +8,7 @@ rectangle Articles {
 (add article) as addArticle
 (remove article) as removeArticle
 (sort article) as sortArticle
+(return all articles) as returnAllArticle
 }
 
 rectangle Clients {
@@ -15,6 +16,7 @@ rectangle Clients {
 (remove client) as removeClient
 (find client) as findClient
 (sort client) as sortClient
+(return all clients) as returnAllClients
 }
 
 client --> borrowArticle
@@ -29,5 +31,7 @@ employee --> addClient
 employee --> removeClient
 employee --> findClient
 employee --> sortClient
+employee --> returnAllArticle
+employee --> returnAllClients
 
 @enduml

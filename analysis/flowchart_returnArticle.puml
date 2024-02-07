@@ -1,18 +1,4 @@
 @startuml
-
-start
-:user asks to see all animals in the shelter;
-:system search all animals in the shelter;
-if(are there any animals found) then (yes)
-    :system show result;
-    end;
-else (no)
-    :error msg there are no animals in the shelter;
-    stop;
-
-@enduml
-
-@startuml
 start
 :client provides article;
 :employee checks article condition;

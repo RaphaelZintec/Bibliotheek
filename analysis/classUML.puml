@@ -1,0 +1,83 @@
+@startuml
+
+package be.intecbrussel {
+    package model {
+        class Article {
+        - String name
+        - String author
+        - int id
+        - LocalDate releaseDate
+        + Article()
+        + Article(String name, String author, int id, LocalDate releaseDate)
+        + getName(): String
+        + setName(String name): void
+        + getAuthor(): String
+        + setAuthor(String author): void
+        + getId(): int
+        + setId(int id): void
+        + getReleaseDate(): LocalDate
+        + setReleaseDate(LocalDate releaseDate): void
+        + toString(): String
+        }
+
+        class Client {
+        - String name
+        - int id
+        + Client()
+        + Client(String name, int id)
+        + getName(): String
+        + setName(String name): void
+        + getId(): int
+        + setId(int id): void
+        + toString(): String
+        }
+    }
+
+    package repository {
+        class ArticleRepository {
+        -List<Article> listArticle;
+        +getArticles() : List<Article>
+        }
+
+        class ClientRepository {
+        -List<Client> listClient;
+        +getClients() : List<Client>
+        }
+    }
+
+    package service {
+        class ClientService {
+        -ClientRepository clientRepository;
+        +ClientService();
+        +addClient(Client client) : String
+        +removeClient(int id) : String
+        +findClient(String name) : Client
+        +findClient(int id) : Client
+        +sortClient(SortType sortType) : String
+        }
+
+        class ArticleService {
+        - ArticleRepository articleRepository;
+        + ArticleService ()
+        + borrowArticle (Article article) : String
+        + addArticle (Article article) : String
+        + removeArticle (int id) : String
+        + findArticleById (int id): Article
+        + findArticleByName (String name): Article
+        + sortArticles() : String
+        }
+    }
+
+    class BibliotheekApp {
+        -ArticleService ArticleService
+        -ClientService clientService
+        +main()
+
+    }
+
+    ArticleService *-- ArticleRepository
+    ClientService *-- ClientRepository
+    BibliotheekApp o-- ArticleService
+    BibliotheekApp o-- ClientService
+}
+@enduml
