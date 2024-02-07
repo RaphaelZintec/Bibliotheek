@@ -1,11 +1,8 @@
 package be.intecbrussel;
-
 import be.intecbrussel.model.Article;
 import be.intecbrussel.model.Client;
 import be.intecbrussel.service.ArticleService;
 import be.intecbrussel.service.ClientService;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BibliotheekApp {

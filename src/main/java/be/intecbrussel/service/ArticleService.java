@@ -23,7 +23,6 @@ public class ArticleService {
         articleRepository.getArticles().add(article);
         return "Article "+ article.getName() +" added in bibliotheek";
     }
-
     public String removeArticle (int id){
         articleRepository.getArticles().remove(findArticleById(id));
         return "article removed out bibliotheek";
@@ -36,22 +35,10 @@ public class ArticleService {
         }
         return null;
     }
-
-    public String findArticleByName(String name){
-        for(Article article : articleRepository.getArticles()){
-            if(article.getName().equalsIgnoreCase(name) ){
-                return "Found Article by Name: " + article.getName();
-            }
-        }
-        return "article not found";
-    }
-
-
     public String sortArticles(){
         articleRepository.getArticles().sort(Comparator.comparing(Article::getName));
         return "Sort is done";
     }
-
     public List<Article> returnAllArticles(){
         return articleRepository.getArticles();
     }
