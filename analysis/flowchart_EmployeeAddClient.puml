@@ -1,0 +1,9 @@
+@startuml
+
+start
+:employee provides a client;
+:system register client in library;
+:success msg: Client added;
+end;
+
+@enduml

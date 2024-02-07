@@ -6,29 +6,33 @@ package be.intecbrussel {
         - String name
         - String author
         - int id
-        - LocalDate releaseDate
+        {static}-int incrementId
         + Article()
-        + Article(String name, String author, int id, LocalDate releaseDate)
+        + Article(String name, String author,String date)
+        + Article(String name, String author, int id)
+        + getDate(): String
+        + setDate(String date): void
         + getName(): String
         + setName(String name): void
         + getAuthor(): String
         + setAuthor(String author): void
         + getId(): int
         + setId(int id): void
-        + getReleaseDate(): LocalDate
-        + setReleaseDate(LocalDate releaseDate): void
         + toString(): String
         }
 
         class Client {
         - String name
         - int id
+        {static}-int incrementId
+        -List<Article> listArticles
         + Client()
         + Client(String name, int id)
         + getName(): String
-        + setName(String name): void
+        + setName(String name)
         + getId(): int
-        + setId(int id): void
+        + setId(int id)
+        + getListArticles() : List<Article>
         + toString(): String
         }
     }
@@ -51,27 +55,29 @@ package be.intecbrussel {
         +ClientService();
         +addClient(Client client) : String
         +removeClient(int id) : String
-        +findClient(String name) : Client
-        +findClient(int id) : Client
-        +sortClient(SortType sortType) : String
+        +findClientById(int id) : Client
+        + returnAllClients() : List<Client>
         }
 
         class ArticleService {
         - ArticleRepository articleRepository;
+        - List<Article> clientArticles;
         + ArticleService ()
+        + getClientArticles() : List<Article>;
         + borrowArticle (Article article) : String
+        + returnArticle () : Article
         + addArticle (Article article) : String
         + removeArticle (int id) : String
         + findArticleById (int id): Article
-        + findArticleByName (String name): Article
         + sortArticles() : String
+        + returnAllArticles() : List<Article>
         }
     }
 
     class BibliotheekApp {
-        -ArticleService ArticleService
-        -ClientService clientService
-        +main()
+        {static}-ArticleService ArticleService
+        {static}-ClientService clientService
+        {static}+main(String[] args)
 
     }
 

@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee inputs the id of the client;
+:system retrieves client by ID;
+
+if (is the client found) then (yes)
+    :return the found client;
+    end;
+
+else (no)
+    :return null;
+    end;
+
+@enduml

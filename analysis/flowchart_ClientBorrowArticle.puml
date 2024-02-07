@@ -1,0 +1,18 @@
+@startuml
+
+start
+
+:Client ask for article id;
+:System search the article with provided id;
+
+if (article in library) then (yes)
+    :remove article from library stock;
+    :add article to client stock;
+    :success msg: The article left bibliotheek;
+    end;
+
+else (no)
+    :error msg: This article ID is not in stock;
+    end
+
+@enduml

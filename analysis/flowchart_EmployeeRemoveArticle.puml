@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee provides article ID;
+
+if(article is found) then (yes)
+    :remove the article;
+    :success msg: Article removed from bibliotheek;
+    end
+
+else (no)
+    :error msg: The article with this ID doesnt exists;
+    end
+
+@enduml

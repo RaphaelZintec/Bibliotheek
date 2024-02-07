@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee inputs the id of the article;
+:system retrieves article by ID;
+
+if (is the article found) then (yes)
+    :return the found article;
+    end;
+
+else (no)
+    :return null;
+    end;
+
+@enduml

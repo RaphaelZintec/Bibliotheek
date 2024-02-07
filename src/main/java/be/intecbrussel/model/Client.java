@@ -42,15 +42,12 @@ public class Client {
         return listArticles;
     }
 
-    public void setListArticles(List<Article> listArticles) {
-        this.listArticles = listArticles;
-    }
-
     @Override
     public String toString() {
         return "Client{" +
                 "name='" + name + '\'' +
                 ", Id=" + Id +
+                ", listArticles=" + listArticles +
                 '}';
     }
 }

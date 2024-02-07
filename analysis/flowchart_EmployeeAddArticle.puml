@@ -1,0 +1,9 @@
+@startuml
+
+start
+:employee provides an article;
+:system add article in the stock of the library;
+:success msg: New article added in bibliotheek;
+end;
+
+@enduml

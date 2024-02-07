@@ -6,16 +6,17 @@ public class Article {
 
     private String name;
     private String author;
+    private String date;
     private int id;
     private static int idIncrement;
-    private LocalDate publicationDate;
 
     public Article(){
 
     }
-    public Article(String name, String author) {
+    public Article(String name, String author,String date) {
         this.name = name;
         this.author = author;
+        this.date = date;
         id = idIncrement+1;
     }
     public Article(String name, String author, int id) {
@@ -23,6 +24,14 @@ public class Article {
         this.author = author;
         this.id = id;
         idIncrement = id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getName() {
@@ -46,7 +55,7 @@ public class Article {
     }
 
     public void setId(int id) {
-        id = id;
+        this.id = id;
     }
 
     @Override
@@ -54,7 +63,8 @@ public class Article {
         return "Article{" +
                 "name='" + name + '\'' +
                 ", author='" + author + '\'' +
-                ", Id=" + id +
+                ", date='" + date + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

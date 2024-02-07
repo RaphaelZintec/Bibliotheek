@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee asks to see all articles;
+:system search all articles in the library;
+
+if(are there any articles found) then (yes)
+    :return list of all articles;
+    end;
+
+else (no)
+    :return empty list;
+    end;
+
+@enduml

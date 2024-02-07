@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee provides client ID;
+
+if(client is found) then (yes)
+    :remove the client;
+    :success msg: Client removed from bibliotheek;
+    end
+
+else (no)
+    :error msg: The client with this ID doesnt exists;
+    end
+
+@enduml

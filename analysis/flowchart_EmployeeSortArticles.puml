@@ -1,0 +1,11 @@
+@startuml
+
+start
+
+:employee asks to sort articles by name;
+:system retrieves all articles;
+:system sort the articles by name;
+:system show success message: Articles sorted by name A-Z;
+end;
+
+@enduml

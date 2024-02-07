@@ -1,0 +1,17 @@
+@startuml
+
+start
+
+:client provides article ID;
+
+if(client has this article) then (yes)
+    :article added in library stock;
+    :article removed from client stock;
+    :success msg: The article returned to bibliotheek;
+    end;
+
+else(no)
+    :error message: You don't have any articles with this ID;
+    end;
+
+@enduml

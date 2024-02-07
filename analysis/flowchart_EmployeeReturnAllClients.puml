@@ -1,0 +1,16 @@
+@startuml
+
+start
+
+:employee asks to see all clients;
+:system search all clients in the library;
+
+if(are there any clients found) then (yes)
+    :return list of all clients;
+    end;
+
+else (no)
+    :return empty list;
+    end;
+
+@enduml
